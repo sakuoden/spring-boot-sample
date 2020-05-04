@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title>商品登録</title>
+</head>
+<body>
+<main class="container">
+  <form method="post" th:object="${productRegisterForm}" th:action="@{product/register}">
+
+    <p>商品名</p>
+    <input type="text" th:field="*{productName.value}" /><br>
+
+    <button>登録</button>
+
+  </form>
+
+</main>
+</body>
+</html>

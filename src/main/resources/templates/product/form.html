@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout :: htmlhead(~{::title})">
+  <meta charset="utf-8"/>
+  <title>販売品登録</title>
+</head>
+<body>
+<main class="container">
+  <header th:replace="fragments/header::header('販売品登録')"></header>
+
+  <form method="post" th:object="${productRegisterForm}" th:action="@{/product/register}">
+
+    <div>販売品名</div>
+    <input type="text" th:field="*{productName.value}"/><br>
+    <div th:if="${#fields.hasErrors('productName.value')}">
+      <p th:errors="*{productName.value}"></p>
+    </div>
+
+    <div>値段</div>
+    <input type="text" th:field="*{productName.value}" maxlength="6"/><br>
+
+    <button>内容確認</button>
+
+  </form>
+
+</main>
+</body>
+</html>

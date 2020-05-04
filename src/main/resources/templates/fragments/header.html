@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>ヘッダー</title>
+</head>
+<body>
+<header th:fragment="header(title)">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-brand">
+      さんぷろ
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <h1 class="navbar-item" th:text="${title}"></h1>
+      </div>
+    </div>
+
+  </nav>
+</header>
+</body>
+</html>
