@@ -11,13 +11,16 @@
   <form method="post" th:object="${productRegisterForm}" th:action="@{/product/register}">
 
     <div>販売品名</div>
-    <input type="text" th:field="*{productName.value}"/><br>
-    <div th:if="${#fields.hasErrors('productName.value')}">
-      <p th:errors="*{productName.value}"></p>
+    <input type="text" th:field="*{productName}"/><br>
+    <div th:if="${#fields.hasErrors('productName')}">
+      <p th:errors="*{productName}"></p>
     </div>
 
     <div>値段</div>
-    <input type="text" th:field="*{productName.value}" maxlength="6"/><br>
+    <input type="text" th:field="*{amount}" maxlength="6"/><br>
+    <div th:if="${#fields.hasErrors('amount')}">
+      <p th:errors="*{amount}"></p>
+    </div>
 
     <button>内容確認</button>
 
