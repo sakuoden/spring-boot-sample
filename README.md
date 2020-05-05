@@ -1,8 +1,6 @@
 # spring-boot-sample
 
 ## 概要
-カンニング用。
-
 DDDにおけるDomainをビジネスルールとして焦点を当てた場合における、Spring-bootの実装サンプル
 
 増田亨さん考案のCCSRによる開発を想定。
